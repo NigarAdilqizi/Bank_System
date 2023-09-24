@@ -1,0 +1,33 @@
+.container .leftSide {
+    text-align: center;
+    width: 40%;
+    background: #B0D8DA;
+    border-radius: 45px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    background: #B0D8DA;
+    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.10);
+}
+ .container .leftSide h1 {
+    font-size: 55px;
+    color: #FFF;
+    text-align: left;
+    margin-left: 20px;
+}
+.container .leftSide .toph {
+    margin-top: 80px;
+    font-weight: 700;
+}
+.container .leftSide .bottomh {
+    font-weight: 100;
+    font-size: 50px;
+}
+.container .leftSide img {
+    max-width: 100%;
+    height: 400px;
+    transform: rotate(-1.381deg);
+    position: relative;
+    left: 100px;
+    top: 50px;
+    z-index: 5;
+} 

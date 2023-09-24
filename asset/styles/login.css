@@ -4,129 +4,91 @@
     font-weight: normal;
     font-style: normal;
   }
-body {
+  body {
     box-sizing: border-box;
-    margin: 0 auto;
-    padding: 0;
-    overflow-x: hidden;
+    overflow: hidden;
     font-family: 'Kanit', sans-serif;
 }
-main{
-    width: 1512px;
+main {
     background: #FEFEFE;
-}
-.container{
     display: flex;
+}
+.container {
     justify-content: center;
     align-items: center;
     height: 100vh; 
+    padding: 50px;
 }
-.leftSide{
-    flex: 1;
-    position: relative;
-    width: 1512px;
-    height: 682px;
-    border-radius: 45px;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    background: #B0D8DA;
-    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.10);
-    flex-direction: left;
-}
-.leftSide h1{
-    color: #FFF;
-    font-size: 51px;
-    font-style: normal;
-    line-height: normal;
-    margin-left: 32px;
-}
-.leftSide .toph{
-    font-weight: 700;
-    margin-top: 108px;
-}
-.leftSide .bottomh{
-    font-weight: 400;
-}
-.leftSide img{
-    width: 314.256px;
-    height: 358.42px;
-    transform: rotate(-1.381deg);
-    float: right;
-    margin-right: -26px;
-    margin-top: 45px;
-    position: relative;
-    z-index: 15;
-}
-.rightSide{
-    border-radius: 45px;
+.container .rightSide {
     background: #FFF;
-    width: 800px;
-    height: 682px;
-    position: relative;
-    z-index: 12;
-    left: -34px;
-    top:0px;
+    border-radius: 45px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    width: 60%;
+    position: relative;
+    z-index: 2;
+    left: -36px;
+    padding: 55px;
 }
-
-.rightSide p{
+.container .rightSide p {
+    color: #ABABAB;
+    text-align: right;
+    margin-right: 25px;
+    margin-top: 20px;
+}
+.container .rightSide img {
+    max-width: 100%;
     float: right;
-    margin-right: 89px;
-    margin-top: 47px;
+    margin-top: -33px;
+    margin-right: 6px;
+}
+.container .rightSide.formElement {
+    margin-top: 20px;
+}
+.container .rightSide .formElement h2 {
+    font-size: 28px;
+    text-align: center;
+}
+.container .rightSide .formElement p {
+    font-size: 20px;
     color: #ABABAB;
+    text-align: left;
+    margin-left: 40px;
+    font-weight: 300;
+    margin-top: 2px;
 }
-.rightSide img{
-    position: absolute;
-    right: 65px;
-    top: 55px;
+.container .rightSide .formElement form {
+    width: 50%;
+    margin-top: 33px;
+    margin-left: 40px;
 }
-.rightSide .formElement{
-    margin: 0 auto; 
-    padding: 90px;
-}
-.rightSide .formElement h2{
-    margin-top: 15px;
-    font-size: 27px;
-}
-.rightSide .formElement p{
-    float: left;
-    font-size: 19px;
-    font-weight: 400;
-    margin-top: 1px;
+.container .rightSide .formElement form label {
     color: #ABABAB;
+    margin-top: 12px;
 }
-.rightSide .formElement form{
-    width: 70%;
-}
-.rightSide .formElement form label{
-    padding-top: 15px;
-    color: #ABABAB;
-    width: 40%;
-    padding-bottom: 5px;
-}
-.rightSide .formElement form input{
-    width: 70%;
-    height: 34px;
+.container .rightSide .formElement form input[type="email"],
+.container .rightSide .formElement form input[type="password"],
+.container .rightSide .formElement form input[type="checkbox"] {
+    width: 100%;
+    height: 30px;
     border-radius: 5px;
     border: 2px solid #D9D9D9;
+    margin-bottom: 10px;
 }
-.rightSide .formElement form #agree{
+.container .rightSide .formElement form #agree {
     width: 15px;
     height: 15px;
-    margin-top: 18px;
-    margin-right: 6px;
+    margin-top: 15px;
+    margin-right: 10px;
     border-radius: 8px;
     border: 3px solid #D9D9D9;
 }
-.rightSide .formElement form span{
-}
-.rightSide .formElement form button{
-    width: 95px;
-    height: 39px;
-    border-radius: 25px;
+.container .rightSide .formElement form button {
+    width: 100px;
+    height: 40px;
+    border-radius: 28px;
     background: #5DC6C9;
     color: #FFF;
-    margin-top: 55px;
+    margin-top: 40px;
     border: none;
-    float: left;
+    float: right;
 }
