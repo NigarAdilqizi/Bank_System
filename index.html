@@ -4,11 +4,55 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration
-        
-    </title>
+    <title>Registration</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./asset/styles/style.css">
 </head>
 <body>
-    
+    <main>
+        <div class="container">
+            <div class="leftSide">
+                <h1 class="toph">Eecamp Bank </h1>
+                <h1 class="bottomh">Xoş gəlmisiz!</h1>
+                <img src="./asset/image/Abstraction.png" alt="loginFaiz">
+            </div>
+            <div class="rightSide">
+                <p class="text-muted">Azərbaycan dili</p>
+                <img src="./asset/image/🦆 icon _nav arrow down_.png" alt="arrow">
+                <div class="formElement">
+                    <h2>Əziz istifadəçi, zəhmət olmasa qeydiyyatdan keçin!</h2>
+                    <p>Qeydiyyatdan keçdikdən sonra, siz daxil ola bilərsiz!</p>
+                    <form class="text-muted" id="registrationForm" action="#">
+                        <label for="username">Ad</label>
+                        <input type="text" id="username" name="username" required>
+                        <span id="usernameError" class="error"></span>
+                        <br>
+                        <label for="surname">Soyad</label>
+                        <input type="text" id="surname" name="surname" required>
+                        <span id="surnameError" class="error"></span>
+                        <br>
+                        <label for="email">E-mail ünvanınız</label>
+                        <input type="email" id="email" name="email" required>
+                        <span id="emailError" class="error"></span>
+                        <br>
+                        <label for="password">Şifrə</label>
+                        <input type="password" id="password" name="password" required>
+                        <span id="passwordError" class="error"></span>
+                        <br>
+                        <label for="confirmPassword">Şifrə təkrar</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" required>
+                        <span id="confirmPasswordError" class="error"></span>
+                        <br>
+                        <input  type="checkbox" id="agree" name="agree" required>
+                        <label for="agree" >Mən, yazılan bütün qaydalarla razıyam.</label>
+                        <button type="submit">Qeydiyyat</button>
+                        <br>
+                    </form>
+                    <div id="errorMessage" class="error"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
