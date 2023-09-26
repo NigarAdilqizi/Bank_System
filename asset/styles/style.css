@@ -91,4 +91,5 @@ main {
     color: #FFF;
     margin-top: 10px;
     border: none;
+    cursor: pointer;
 }

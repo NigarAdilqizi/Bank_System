@@ -1,0 +1,159 @@
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    .container .rightSide {
+        padding: 10px;
+        width: 90%;
+        margin: 0 auto;
+        margin-left: 60px;
+    }
+
+    .container .rightSide p {
+        text-align: right;
+        margin-right: 36px;
+        margin-top: 10px;
+        font-size: 12px;
+    }
+
+    .container .rightSide img {
+        float: right;
+        display: block;
+        margin-right: 14px;
+        margin-top: -30px;
+    }
+    .container .rightSide .formElement h2{
+        font-size: 14px;
+        float: left;
+        margin-top: -15px;
+        margin-left: 20px;
+    }
+    .container .rightSide .formElement p {
+        font-size: 12px;
+        float: left;
+        margin-top: -6px;
+        margin-left: 20px;
+    }
+
+    .container .rightSide .formElement form {
+        width: 60%;
+        margin-left: 20px;
+        font-size: 10px;
+        margin-top: -10px;
+    }
+    .container .rightSide .formElement label{
+        margin-top:-15px;
+        font-size:12px;
+    }
+    .container .rightSide .formElement .chexbx{
+        margin-top: -13px;
+    }
+    .container .rightSide .formElement .bn{
+        width: 70px;
+        height: 30px;
+    }
+}
+    /*  768 ile 991 px arasındaki ekranlarda  */
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .container .rightSide{
+        width: 54%;
+        height: 600px;
+        padding: 10px;
+
+    }
+    .container .rightSide p {
+        text-align: right;
+        margin-right: 36px;
+        margin-top: 50px;
+        font-size: 14px;
+    }
+
+    .container .rightSide img {
+        float: right;
+        display: block;
+        margin-right: 14px;
+        margin-top: -30px;
+    }
+    .container .rightSide .formElement h2{
+        font-size: 14px;
+        float: left;
+        margin-top: 10px;
+        margin-left: 20px;
+    }
+    .container .rightSide .formElement p {
+        font-size: 12px;
+        float: left;
+        margin-top: -6px;
+        margin-left: 20px;
+    }
+
+    .container .rightSide .formElement form {
+        width: 60%;
+        margin-left: 40px;
+        font-size: 10px;
+        margin-top: -10px;
+    }
+    .container .rightSide .formElement label{
+        margin-top:-15px;
+        font-size:12px;
+    }
+    .container .rightSide .formElement .chexbx{
+        margin-top: -13px;
+    }
+    .container .rightSide .formElement .bn{
+        width: 70px;
+        height: 30px;
+    }
+} 
+   /* 991 ile 1440 px aralığındaki ekranlarda */
+   @media screen and (min-width: 991px) and (max-width: 1440px) {
+    .container .rightSide{
+        width: 60%;
+        margin-top: 50px;
+        padding: 20px;
+    }
+    .container .rightSide p {
+        text-align: right;
+        margin-right: 36px;
+        margin-top: 30px;
+        font-size: 14px;
+    }
+
+    .container .rightSide img {
+        float: right;
+        display: block;
+        margin-right: 14px;
+        margin-top: -30px;
+    }
+    .container .rightSide .formElement h2{
+        font-size: 20px;
+        float: left;
+        margin-top: 10px;
+        margin-left: 40px;
+    }
+    .container .rightSide .formElement p {
+        font-size: 15px;
+        float: left;
+        margin-top: -6px;
+        margin-left: 40px;
+    }
+
+    .container .rightSide .formElement form {
+        width: 60%;
+        margin-left: 40px;
+        font-size: 10px;
+        margin-top: -10px;
+    }
+    .container .rightSide .formElement label{
+        margin-top:-15px;
+        font-size:12px;
+    }
+    .container .rightSide .formElement .chexbx{
+        margin-top: -13px;
+    }
+    .container .rightSide .formElement .bn{
+        width: 70px;
+        height: 30px;
+    }
+}

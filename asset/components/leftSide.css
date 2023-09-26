@@ -13,6 +13,7 @@
     color: #FFF;
     text-align: left;
     margin-left: 20px;
+    margin: 0 auto;
 }
 .container .leftSide .toph {
     margin-top: 80px;
@@ -31,3 +32,121 @@
     top: 50px;
     z-index: 5;
 } 
+/* 768 px ve ya daha geniş ekranlar ucundur*/
+@media screen and (min-width: 768px) {
+    .container .leftSide {
+        text-align: center;
+        width: 40%;
+        background: #B0D8DA;
+        border-radius: 45px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        background: #B0D8DA;
+        box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.10);
+    }
+    .container .leftSide h1 {
+        font-size: 55px;
+        color: #FFF;
+        text-align: left;
+        margin-left: 20px;
+    }
+    .container .leftSide .toph {
+        margin-top: 80px;
+    }
+    .container .leftSide .bottomh {
+        font-size: 50px;
+    }
+    .container .leftSide img {
+        max-width: 100%;
+        height: 400px;
+        transform: rotate(-1.381deg);
+        position: relative;
+        left: 100px;
+        top: 50px;
+        z-index: 5;
+    }
+}
+
+/*  767 px ve ya daha dar ekranlar ucundur */
+@media screen and (max-width: 767px) {
+    .container .leftSide {
+        text-align: center;
+        width: 90%;
+        margin: 0 auto;
+        border-radius: 45px;
+    }
+    .container .leftSide h1 {
+        font-size: 25px;
+        text-align: center;
+    }
+    .container .leftSide .toph {
+        margin-top: 20px;
+    }
+    .container .leftSide .bottomh {
+        font-size: 20px;
+    }
+    .container .leftSide img {
+        max-width: 100%;
+        height: 100px;
+        transform: rotate(0);
+        position: static;
+        left: 0;
+        top: 0;
+        z-index: 0;
+    }
+}
+    /*  768 ile 991 px arasındaki ekranlarda  */
+
+    @media screen and (min-width: 768px) and (max-width: 991px) {
+        .container .leftSide{
+            width: 46%;
+            height: 600px;
+        }
+        .container .leftSide h1 {
+            font-size: 34px;
+            text-align: left;
+        }
+        .container .leftSide .toph {
+            margin-top: 90px;
+        }
+        .container .leftSide .bottomh {
+            font-size: 30px;
+        }
+        .container .leftSide img {
+            max-width: 100%;
+            height: 200px;
+            transform: rotate(0);
+            position: relative;
+            left: 55px;
+            top: 100px;
+            z-index: 10;
+        }
+    }
+
+    /* 991 ile 1440 px aralığındaki ekranlarda */
+   @media screen and (min-width: 991px) and (max-width: 1440px) {
+    .container .leftSide{
+        width: 40%;
+        margin-top: 50px;
+        padding: 40px;
+    }
+    .container .leftSide h1 {
+        font-size: 40px;
+        text-align: left;
+    }
+    .container .leftSide .toph {
+        margin-top: 60px;
+    }
+    .container .leftSide .bottomh {
+        font-size: 30px;
+    }
+    .container .leftSide img {
+        max-width: 100%;
+        height: 200px;
+        transform: rotate(0);
+        position: relative;
+        left: 106px;
+        top: 70px;
+        z-index: 10;
+    }
+}
