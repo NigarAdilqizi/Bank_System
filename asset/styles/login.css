@@ -1,3 +1,6 @@
+@import url(../components/leftSide.css);
+@import url(../components/rightSide.css);
+
 @font-face {
     font-family: 'Kanit';
     src: url('./Kanit/Kanit-Regular.ttf') format('truetype'); 
