@@ -55,8 +55,20 @@ registrationForm.addEventListener('submit', function (e) {
         }
     }
 
+    // Hər bir error mesajının inputa uyğun olduğunu bildirən map yaradırıq
+    const errorInputMapping = {
+        "Ad yalnızca hərflərdən ibarət olmalıdır və boş buraxılmamalıdır.": "username",
+        "Soyad yalnızca hərflərdən ibarət olmalıdır və boş buraxılmamalıdır.": "surname",
+        "Düzgün email ünvanı daxil edin (nümunə: example@example.com).": "email",
+        "Şifrə 8-20 simvoldan ibarət olmalıdır.": "password",
+        "Şifrələr eyni olmalıdır.": "confirmPassword",
+        "Qaydalarla razı olmalısınız.": "agree"
+    };
+
     for (const error of validationErrors) {
-        displayErrorMessage(usernameInput, error); // Uyğun inputun altında xəbərdarlıq mesajını göstər
+        const inputId = errorInputMapping[error];
+        const input = document.querySelector(`#${inputId}`);
+        displayErrorMessage(input, error); // Uyğun inputun altında xəbərdarlıq mesajını göstər
     }
 
     // Əgər hər şey düzgündirsə, konsol-a uğurlu mesajı yazır
@@ -92,6 +104,8 @@ function displayErrorMessage(input, message) {
     const errorMessage = document.createElement("p");
     errorMessage.className = "error-message";
     errorMessage.style.color = "red"; 
+    errorMessage.style.fontSize = "12px";
+    errorMessage.style.marginLeft = "0px";
     errorMessage.textContent = message;
 
     // Inputun altına əlavə edir
