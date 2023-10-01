@@ -1,26 +1,39 @@
 const email = document.querySelector("#email");
 const password = document.querySelector("#password");
 const login = document.getElementById("login");
-const errorMessage = document.getElementById("error-message"); // Hata mesajını alırız
+const errorMessage = document.getElementById("error-message"); 
 
-login.onmouseover = function (e) {
+login.addEventListener("mouseover", function (e) {
     if (!email.value.trim() || !password.value.trim()) {
-        login.style.float = "left"; // Düğmeyi sağa kaydırırız
+        login.style.transform = "translateX(-230px)";
+        login.innerHTML = "ahah";
     } else {
-        login.style.float = "right"; // Düğmeyi eski konumuna getiririz
+        login.style.transform = "translateX(0px)";
+        login.innerHTML = "ahah";
     }
-}
+});
+
+login.addEventListener("mouseout", function (e) {
+    login.style.transform = "translateX(0)";
+    login.innerHTML = "ahah";
+});
 
 login.addEventListener("click", (e) => {
     e.preventDefault();
     if (!isSuccess(email.value.trim(), password.value.trim())) {
-        errorMessage.style.display = "block"; // Hata mesajını görünür yaparız
+        errorMessage.style.display = "block"; 
+        errorMessage.style.fontSize = "13px";
+        errorMessage.style.marginLeft = "33px";
+        errorMessage.style.marginTop = "-20px";
+        errorMessage.style.fontWeight = "bold";
         errorMessage.innerHTML = "Email və ya Şifrə düzgün deyil!";
+        login.style.transform = "translateX(0)";
+        login.innerHTML = "Daxil ol";
     } else {
-        errorMessage.style.display = "none"; // Hata mesajını gizleriz
+        errorMessage.style.display = "none"; 
         window.location.href = "./asset/pages/bank.html";
     }
-})
+});
 
 const isSuccess = (email, password) => {
     const storedEmail = localStorage.getItem("email");
