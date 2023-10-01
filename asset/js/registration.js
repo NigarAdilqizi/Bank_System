@@ -1,7 +1,7 @@
 const registrationForm = document.querySelector("#registrationForm");
 
 registrationForm.addEventListener('submit', function (e) {
-    e.preventDefault(); // Formun avtomatik göndərilməsini dayandır
+    e.preventDefault(); // Formun avtomatik göndərilməsini dayandırır
 
     // Inputları aliriq
     const usernameInput = document.querySelector("#username");
@@ -11,7 +11,7 @@ registrationForm.addEventListener('submit', function (e) {
     const confirmPasswordInput = document.querySelector("#confirmPassword");
     const agreeCheckbox = document.querySelector("#agree");
 
-    // Doğrulama səhvlərini yığır
+    // Tesdiqleme səhvlərini yığır
     const validationErrors = [];
 
     if (!validateAlphabeticNotEmpty(usernameInput)) {
@@ -46,12 +46,12 @@ registrationForm.addEventListener('submit', function (e) {
         validationErrors.push("Soyad 4-15 simvoldan ibarət olmalıdır.");
     }
 
-    // Hər bir doğrulama səhvindən sonra uyğun inputun altında xəbərdarlıq mesajını göstər
+    // Hər bir doğrulama səhvindən sonra uyğun inputun altında xəbərdarlıq mesajını göstərir
     for (const input of [usernameInput, surnameInput, emailInput, passwordInput, confirmPasswordInput, agreeCheckbox]) {
         const errorMessage = input.nextElementSibling;
 
         if (errorMessage && errorMessage.classList.contains("error-message")) {
-            errorMessage.remove(); // Əvvəlki xəbərdarlıq mesajını sil
+            errorMessage.remove(); // Əvvəlki xəbərdarlıq mesajını silir
         }
     }
 
@@ -68,19 +68,21 @@ registrationForm.addEventListener('submit', function (e) {
     for (const error of validationErrors) {
         const inputId = errorInputMapping[error];
         const input = document.querySelector(`#${inputId}`);
-        displayErrorMessage(input, error); // Uyğun inputun altında xəbərdarlıq mesajını göstər
+        displayErrorMessage(input, error); // Uyğun inputun altında xəbərdarlıq mesajını göstərir
     }
 
-    // Əgər hər şey düzgündirsə, konsol-a uğurlu mesajı yazır
+    // Əgər hər şey düzgündirsə, login.html e kecir
     if (validationErrors.length === 0) {
-        console.log("Qeydiyyat uğurla tamamlandı!");
+     localStorage.setItem("email", emailInput.value.trim());
+    localStorage.setItem("password", passwordInput.value.trim());
+      window.location.href="./asset/pages/login.html";
     }
 });
 
 // Input tesdiqlemeleri
 function validateAlphabeticNotEmpty(input) {
     const value = input.value.trim();
-    const alphabeticRegex = /^[A-Za-z]+$/; // Yalnızca hərfləri qəbul edir
+    const alphabeticRegex = /^[A-Za-z]+$/; // Yalnızca hərfləri qəbul edir  
     return alphabeticRegex.test(value) && value.length > 0;
 }
 
