@@ -9,7 +9,7 @@ login.addEventListener("mouseover", function (e) {
         login.innerHTML = "ahah";
     } else {
         login.style.transform = "translateX(0px)";
-        login.innerHTML = "ahah";
+        login.innerHTML = "Daxil ol";
     }
 });
 
