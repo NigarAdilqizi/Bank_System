@@ -1,24 +1,23 @@
 const email = document.querySelector("#email");
 const password = document.querySelector("#password");
 const login = document.getElementById("login");
+const errorMessage = document.getElementById("error-message"); // Hata mesajını alırız
 
-login.onmouseover = function(e) {
+login.onmouseover = function (e) {
     if (!email.value.trim() || !password.value.trim()) {
-        login.classList.toggle("right");
-        login.innerHTML = "ahah";
+        login.style.float = "left"; // Düğmeyi sağa kaydırırız
     } else {
-        login.innerHTML = "Daxil ol";
+        login.style.float = "right"; // Düğmeyi eski konumuna getiririz
     }
 }
 
 login.addEventListener("click", (e) => {
     e.preventDefault();
-    const p = document.getElementById("emailError");
     if (!isSuccess(email.value.trim(), password.value.trim())) {
-        p.style.display = "block";
-        p.innerHTML = "Email və ya Şifrə düzgün deyil!";
+        errorMessage.style.display = "block"; // Hata mesajını görünür yaparız
+        errorMessage.innerHTML = "Email və ya Şifrə düzgün deyil!";
     } else {
-        p.style.display = "none";
+        errorMessage.style.display = "none"; // Hata mesajını gizleriz
         window.location.href = "./asset/pages/bank.html";
     }
 })
